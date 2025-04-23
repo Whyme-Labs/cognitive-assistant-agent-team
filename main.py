@@ -17,6 +17,7 @@ from agents import (
     StrategyCompetitionAgent,
     LearningCommunicationAgent,
     EfficiencyProcessAgent,
+    MotivationHumanFactorsAgent,
 )
 
 # Check API Keys on startup
@@ -48,6 +49,7 @@ def create_agent_team() -> Team:
         "strategy_competition_agent": StrategyCompetitionAgent(llm=llm),
         "learning_communication_agent": LearningCommunicationAgent(llm=llm),
         "efficiency_process_agent": EfficiencyProcessAgent(llm=llm),
+        "motivation_human_factors_agent": MotivationHumanFactorsAgent(llm=llm),
     }
 
     all_members = [coordinator] + list(specialists.values())
